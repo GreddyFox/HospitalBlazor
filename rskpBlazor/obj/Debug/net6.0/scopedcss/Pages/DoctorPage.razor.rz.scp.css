@@ -1,0 +1,32 @@
+.field[b-4ldbqevedt] {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.doctorBlock[b-4ldbqevedt] {
+    display: flex;
+    flex-direction: column;
+}
+
+.label[b-4ldbqevedt] {
+    width: 200px;
+}
+
+.valueField[b-4ldbqevedt] {
+    width: 400px;
+}
+
+.artDoctors[b-4ldbqevedt] {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctorTag[b-4ldbqevedt] {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #8b008bff;
+    border-radius: 8px;
+    background-color: #ff00ff44;
+}
+

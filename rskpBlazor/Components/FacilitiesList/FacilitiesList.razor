@@ -1,0 +1,96 @@
+﻿@using rskpBlazor.Data.Models
+@using rskpBlazor.Services
+@inject NavigationManager _navigationManager
+
+<h1 class="text-success p-3" >Перечень услуг </h1>
+<hr />
+@*
+@if (facilities != null)
+{
+            <div class="container">
+              <div class="row">
+            @for(int i = 0; i < facilities.Count; i++)
+            {
+                if(i>0 && i % 2 == 0)
+                {
+                    <div class="col-sm">
+                  One of three columns
+                </div>
+                }
+                <div class="col-sm">
+                  One of three columns
+                </div>
+
+                <div class="col-sm">
+                  One of three columns
+                </div>
+
+                <div class="col-sm">
+                  One of three columns
+                </div> 
+            }
+            
+
+              </div>
+        </div>*@
+@if (facilities != null){
+    @foreach(var facility in facilities)
+    {
+        <div class="doctorBlock p-3" align="center">
+
+                  <div class="card w-50" >
+                  <img src="/Images/back.PNG" class="card-img-top" alt="...">
+
+                     <div class="card-body">
+                             
+                        
+                        <h5 class="card-title">@facility.FacilityName</h5>
+                        <p class="card-text">Цена услуги: @facility.Price</p>
+                     </div>
+                  </div>
+                  <br />
+        
+        </div>
+    }
+}
+}
+
+@*<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Наименование услуги</th>
+        <th>Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (facilities != null)
+    {
+       @foreach (var facility in facilities)
+      
+        {
+            <tr  @onclick="()=>toItem(facility)">
+                <td>@facility.Id</td>
+                <td>@facility.FacilityName</td>
+                <td>@facility.Price</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>*@
+
+
+@code {
+     private List<Facility>? facilities;
+    [Inject]
+    private IFacilityProvider facilitiesProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        facilities = await facilitiesProvider.GetAll();
+    }
+    public void toItem(Facility facility)
+    {
+        _navigationManager.NavigateTo($"/Facility/{facility.Id}");
+    }
+
+}

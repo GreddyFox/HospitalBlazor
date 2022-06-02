@@ -1,0 +1,58 @@
+﻿@page "/Patient/{PatientId}"
+@using rskpBlazor.Services
+
+<h3>Информация о </h3>
+@if (CurrentDoctor != null)
+{
+    <div class="doctorBlock">
+        <div class="field">
+            <label class="label">Идентификатор</label> <input class="form-control valueField" type="text" value="@CurrentDoctor.Id" aria-label="Disabled input example" disabled readonly>
+        </div>
+        <div class="field">
+            <label class="label">ФИО</label> <input class="form-control valueField" type="text" value="@CurrentDoctor.FullName" aria-label="Disabled input example" disabled readonly>
+        </div>
+        @*<div class="field">
+            <label class="label">Услуги</label> <input class="form-control valueField" type="text" value="@CurrentDoctor.Facility" aria-label="Disabled input example" disabled readonly>
+        </div>*@
+        <div class="field">
+            <label class="label">Специальность</label> <input class="form-control valueField" type="text" value="@CurrentDoctor.Occupation" aria-label="Disabled input example" disabled readonly>
+        </div>
+    </div>
+
+   
+        <table class="table">
+    <thead>
+    <th>Услуга</th>
+    <th>Цена</th>
+    </thead>
+    @*<tbody>
+        @foreach (var art in CurrentDoctor.Facilities)
+        {
+            <tr>
+                <td>@art.FacilityName</td>
+                <td>@art.Price</td>
+            </tr>
+        }
+    </tbody>*@
+</table> 
+    
+    
+}
+
+
+@code {
+	    [Parameter]
+    public string DoctorId { get; set; }
+    public List<Data.Models.Doctor> Doctors { get; set; }
+    public Data.Models.Doctor? CurrentDoctor { get; set; }
+    [Inject]
+    private IDoctorProvider doctorsProvider { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        CurrentDoctor = await doctorsProvider.GetOne(Int32.Parse(DoctorId));
+        Doctors = await doctorsProvider.GetAll();
+        Console.WriteLine(CurrentDoctor);
+        base.OnInitialized();
+    }
+
+}

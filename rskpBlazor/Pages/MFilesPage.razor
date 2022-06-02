@@ -1,0 +1,44 @@
+﻿@page "/MedicalFile"
+@using rskpBlazor.Data.Models
+@using rskpBlazor.Services
+@inject NavigationManager _navigationManager
+
+<h1 class="text-success p-3">Медицинские карты </h1>
+<hr />
+<table class="table">
+    <thead>
+    <tr>
+        <th>Пациент</th>
+        <th>Дата</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (medicalFiles != null)
+    {
+       @foreach (var mf in medicalFiles)
+      
+        {
+            <tr  @onclick="()=>toItem(mf)">
+                <td>@mf.Patient.FullName</td>
+                <td>@mf.StartDate</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+
+@code {
+     private List<MedicalFile>? medicalFiles;
+    [Inject]
+    private IMedicalFileProvider medicalFilesProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        medicalFiles = await medicalFilesProvider.GetAll();
+    }
+    public void toItem(MedicalFile medicalFile)
+    {
+        _navigationManager.NavigateTo($"/MedicalFile/{medicalFile.Id}");
+    }
+
+}

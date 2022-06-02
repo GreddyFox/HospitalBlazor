@@ -1,0 +1,66 @@
+﻿@page "/Facility/{FacilityId}"
+@using rskpBlazor.Services
+
+@if (CurrentFacility != null)
+{
+    <div class="doctorBlock">
+
+                  <div class="card">
+              <img src="/Images/back.PNG" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <h5 class="card-title">@CurrentFacility.FacilityName</h5>
+                <p class="card-text">Цена услуги: @CurrentFacility.Price</p>
+            
+              </div>
+            </div>
+          
+      @*  <div class="field">
+            <label class="label">Идентификатор</label> <input class="form-control valueField" type="text" value="@CurrentFacility.Id" aria-label="Disabled input example" disabled readonly>
+        </div>
+        <div class="field">
+            <label class="label">Наименование услуги</label> <input class="form-control valueField" type="text" value="@CurrentFacility.FacilityName" aria-label="Disabled input example" disabled readonly>
+        </div>
+       
+        <div class="field">
+            <label class="label">Цена</label> <input class="form-control valueField" type="text" value="@CurrentFacility.Price" aria-label="Disabled input example" disabled readonly>
+        </div>*@
+    </div>
+
+   
+  @*      <table class="table">
+    <thead>
+    <th>Услуга</th>
+    <th>Цена</th>
+    </thead>
+    <tbody>
+        @foreach (var art in CurrentDoctor.Facilities)
+        {
+            <tr>
+                <td>@art.FacilityName</td>
+                <td>@art.Price</td>
+            </tr>
+        }
+    </tbody>
+</table> *@
+    
+    
+}
+
+
+@code {
+	    [Parameter]
+    public string FacilityId { get; set; }
+    public List<Data.Models.Facility> Facilities { get; set; }
+    public Data.Models.Facility? CurrentFacility { get; set; }
+    [Inject]
+    private IFacilityProvider facilitiesProvider { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        CurrentFacility = await facilitiesProvider.GetOne(Int32.Parse(FacilityId));
+        Facilities = await facilitiesProvider.GetAll();
+        Console.WriteLine(CurrentFacility);
+        base.OnInitialized();
+    }
+
+}

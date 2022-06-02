@@ -1,0 +1,44 @@
+﻿@using rskpBlazor.Data.Models
+@using rskpBlazor.Services
+@inject NavigationManager _navigationManager
+
+<h1>Список докторов</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>ФИО</th>
+        <th>Специальность</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (doctors != null)
+    {
+       @foreach (var doctor in doctors)
+      
+        {
+            <tr  @onclick="()=>toItem(doctor)">
+                <td>@doctor.Id</td>
+                <td>@doctor.FullName</td>
+                <td>@doctor.Occupation</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+
+@code {
+     private List<Doctor>? doctors;
+    [Inject]
+    private IDoctorProvider doctorsProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        doctors = await doctorsProvider.GetAll();
+    }
+    public void toItem(Doctor doctor)
+    {
+        _navigationManager.NavigateTo($"/Doctor/{doctor.Id}");
+    }
+
+}

@@ -1,0 +1,157 @@
+﻿@page "/MakeAppointment"
+@using rskpBlazor.Data.Models
+@using rskpBlazor.Services
+@inject NavigationManager _navigationManager
+<h1 class="text-success p-3" >Запись на прием </h1>
+<hr />
+
+<div class="row">
+      <div class="col-lg-6">
+           <div class="form-group p-3">
+
+
+
+
+                
+                 @*<label for="form_need">Пациент</label>
+
+                 <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                 <option value="" selected disabled>Выберите пациента</option>
+                 @if (patients != null)
+                  {
+                   @foreach (var pat in patients)
+                        {
+                        <patients>@pat.FullName</patients>
+                    }
+                }
+                 </select>*@
+
+
+
+                 <label for="form_need">Доктор</label>
+
+                 <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                 <option value="" selected disabled>Выберите доктора</option>
+                 @if (doctors != null)
+                {
+                    @foreach (var doc in doctors)
+                    {
+                        <option>@doc.Occupation</option>
+                    }
+
+                }
+            </select>
+            <br />
+            <label for="form_need">Услуга</label>
+            <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                <option value="" selected disabled>Выберите услугу</option>
+                @if (doctors != null)
+                {
+                    @foreach (var fac in facilities)
+                    {
+                        <option>@fac.FacilityName</option>
+                    }
+
+
+
+                }
+            </select>
+                 <br />
+                 <div class="btn btn-success"> Записаться на прием</div>
+
+                @* </select>
+
+                 <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                 <option value="" selected disabled>Выберите Услугу</option>
+                 @if (PickedDoc != null)
+                  {
+                   
+                        @foreach(var fac in PickedDoc.Facility)
+                        {
+                            <option>@fac.FacilityName</option>
+                        }
+
+                
+                 }*@
+                
+
+
+
+
+               @*   <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                <option value="" selected disabled>Выберите услугу</option>
+                 @if (facilities != null)
+                  {
+                   @foreach (var fac in facilities)
+                        {
+                         <option>@fac.FacilityName</option>
+                        }
+                    
+                  }
+
+                    </select>
+                 <label for="form_need">Доктор</label>
+                 <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                 <option value="" selected disabled>Выберите доктора</option>
+                 @if (doctors != null)
+                  {
+                   @foreach (var doc in doctors)
+                        {
+                       
+                        <option>@doc.FullName</option>
+                        <option>@doc.Facility</option>
+                        }
+                  }
+                 </select>*@
+
+
+
+                  </div>
+      </div>
+</div>
+@code {
+
+    private List<Facility>? facilities;
+    private List<Doctor>? doctors;
+    private List<Patient>? patients;
+    [Inject]
+    private IFacilityProvider facilitiesProvider { get; set; }
+    [Inject]
+    private IDoctorProvider doctorProvider { get; set; }
+    [Inject]
+    private IPatientProvider patientProvider { get; set; }
+
+
+    //public void takePickedDoc(Doctor doctor)
+    //{
+    //    PickedDoc = doctor;
+    //    Console.WriteLine(doctor.Id);
+    //}
+
+    protected override async Task OnInitializedAsync()
+    {
+        facilities = await facilitiesProvider.GetAll();
+        doctors = await doctorProvider.GetAll();
+        patients = await patientProvider.GetAll();
+    }
+
+    private Appointment appointment;
+    [Inject]
+    private IAppointmentProvider appointmentProvider{ get; set; }
+
+
+    public Doctor PickedDoc;
+    public Facility PickedFac;
+    public Patient PickedPat;
+
+    
+
+
+    //public async void MakeApp()
+    //{
+
+    //    appointmentProvider.Add(appointment);
+    //    Console.WriteLine("a");
+    //}
+    
+}

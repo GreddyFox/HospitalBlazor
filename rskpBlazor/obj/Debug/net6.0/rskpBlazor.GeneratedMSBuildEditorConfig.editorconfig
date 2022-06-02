@@ -1,0 +1,111 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = rskpBlazor
+build_property.RootNamespace = rskpBlazor
+build_property.ProjectDir = C:\Users\m2008656\source\repos\rskpBlazor\rskpBlazor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\m2008656\source\repos\rskpBlazor\rskpBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Components/Main/Main.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNYWluXE1haW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/AboutUs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/Contacts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/DoctorsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9yc1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/FacilitiesPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjaWxpdGllc1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/FacilityPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjaWxpdHlQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/MakeAppointment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFrZUFwcG9pbnRtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/MFilesPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTUZpbGVzUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Components/AppointmentsList/AppointmentsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHBvaW50bWVudHNMaXN0XEFwcG9pbnRtZW50c0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-r51v2fc21e
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Components/DoctorsList/DoctorsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEb2N0b3JzTGlzdFxEb2N0b3JzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-g6jvq1g45t
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Components/FacilitiesList/FacilitiesList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGYWNpbGl0aWVzTGlzdFxGYWNpbGl0aWVzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-zqkana264c
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Components/MedicalFilesList/MedicalFilesList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZWRpY2FsRmlsZXNMaXN0XE1lZGljYWxGaWxlc0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7l9sklfutz
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Components/PatienstList/PatientsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYXRpZW5zdExpc3RcUGF0aWVudHNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ujktxegrfi
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/DoctorPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9yUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-4ldbqevedt
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/MedicalFilePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNhbEZpbGVQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-hrnd6ecg4q
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Pages/PatientPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-azyg73jdob
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-frx4pedanu
+
+[C:/Users/m2008656/source/repos/rskpBlazor/rskpBlazor/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4bjf6f6s1o
