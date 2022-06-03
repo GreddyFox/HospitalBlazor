@@ -1,19 +1,20 @@
 ﻿@page "/MedicalFile/{MedicalFileId}"
 @using rskpBlazor.Services
 
-<h3 p-3>Медкарта</h3>
+
 @if (CurrentMedicalFile != null)
 {
 
     <div class="doctorBlock p-3" align="center">
         <div class="card w-50">
-             <img src="/Images/back.PNG" class="card-img-top" alt="...">
+             <img src="/Images/bgim.PNG" class="card-img-top" alt="...">
 
                      <div class="card-body">
                              
-                        
-                        <h5 class="card-title">@CurrentMedicalFile.Patient.FullName</h5>
-                        <p class="card-text">Цена услуги: @CurrentMedicalFile.StartDate</p>
+                        <h2 class="card-title">Медицинская карта</h2>
+                        <h5 class="card-text">@CurrentMedicalFile.Patient.FullName</h5>
+                        <p class="card-text">Дата создания карты: @CurrentMedicalFile.StartDate</p>
+
                      </div>
         </div>
     </div>

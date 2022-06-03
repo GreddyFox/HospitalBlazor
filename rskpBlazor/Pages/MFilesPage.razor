@@ -9,7 +9,7 @@
     <thead>
     <tr>
         <th>Пациент</th>
-        <th>Дата</th>
+      @*  <th>Дата</th>*@
     </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
         {
             <tr  @onclick="()=>toItem(mf)">
                 <td>@mf.Patient.FullName</td>
-                <td>@mf.StartDate</td>
+                @*<td>@mf.StartDate</td>*@
             </tr>
         }
     }
